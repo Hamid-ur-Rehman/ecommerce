@@ -10,11 +10,11 @@ import { CartItem } from '../cart/entities/cart-item.entity';
 
 export default new DataSource({
   type: 'postgres',
-  host: process.env.DB_HOST || 'localhost',
+  host: process.env.DB_HOST || 'database-1.cha4iumyadkm.ap-south-1.rds.amazonaws.com',
   port: parseInt(process.env.DB_PORT) || 5432,
   username: process.env.DB_USERNAME || 'postgres',
   password: process.env.DB_PASSWORD || 'Sailor1234!',
-  database: process.env.DB_DATABASE || 'ecommerce',
+  database: process.env.DB_DATABASE || 'testdb',
   entities: [User, Role, Product, Category, Order, OrderItem, Cart, CartItem],
   migrations: ['src/migrations/*.ts'],
   synchronize: false,
